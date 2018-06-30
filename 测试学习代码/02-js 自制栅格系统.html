@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container{
+            margin: 0 auto;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+
+<script>
+    window.addEventListener('load', function(){
+        //1、获取常量
+            var container = document.querySelector('.container')
+            var clientW = 0; 
+        
+        //2、监听窗口大小变化
+            resize();   //让窗口未改变宽度，默认情况下调用resize方法
+            window.addEventListener('resize', resize)
+            function resize(){
+                //2.1获取窗口改变后的宽度
+                clientW = window.innerWidth;
+                // console.log(clientW);
+
+                //2.2判断
+                if(clientW >= 1200){
+                    container.style.width = "1170px";
+                }else if(clientW >= 992){
+                    container.style.width = "970px";
+                }else if(clientW >= 768){
+                    container.style.width = "750px";
+                }else {
+                    container.style.width = "100%";
+                }
+            }
+    })
+</script>
+</body>
+
+</html>

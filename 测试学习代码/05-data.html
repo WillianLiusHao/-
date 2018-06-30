@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>data数据绑定</title>
+</head>
+<body>
+    <div data-name= "周杰伦" data-age= "40"></div>
+    <button id="btn">获取数据</button>
+    <button id="btn1">改变数据</button>
+
+    <script src="../lib/jQuery/jquery.js"></script>
+    <script>
+        $(function(){
+        //获取数据
+            $("#btn").on('click', function(){
+                console.log($('div').data('name'));                
+            })
+        //设置数据
+            $("#btn1").on('click', function(){
+                $('div').data('name', '你好');                
+            })
+        })
+    </script>
+</body>
+</html>

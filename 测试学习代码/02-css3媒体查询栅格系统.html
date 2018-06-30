@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .container {
+            margin: 0 auto;
+            height: 100px;
+            background-color: purple;
+        }
+        @media screen and (max-width: 768px){
+            .container{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px){
+            .container{
+                width: 750px;
+            }
+        }
+        @media screen and (min-width: 992px) and (max-width: 1200px){
+            .container{
+                width: 970px;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .container{
+                width: 1170px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+</body>
+
+</html>

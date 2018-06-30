@@ -1,0 +1,120 @@
+/****************************通用的样式********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+@font-face {
+    font-family: my;
+    src: url('../fonts/my.eot') format('embedded-opentype'), url('../fonts/my.svg') format('svg'), url('../fonts/my.woff') format('woof'), url('../fonts/my.ttf') format('truetype');
+}
+
+[class^="icon-"],
+
+/*匹配以 "icon-" 开头的类*/
+
+[class*=" icon-"] {
+    /*匹配第二个以后含有类名 "icon-" 的类*/
+    /*自定义自己的字体图标使用方式，使用类*/
+    font-family: my;
+    font-style: normal;
+}
+
+
+/****************************通用的样式********************************/
+
+
+/****************************头部的样式********************************/
+
+#ls_header {}
+
+#ls_header .top-bar {
+    height: 40px;
+    line-height: 39px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#ls_header .top-bar .row>div+div {
+    border-left: 1px solid #e0e0e0;
+}
+
+#ls_header .top-bar .row .top-bar1 a {
+    position: relative;
+}
+
+#ls_header .top-bar .row .top-bar1 a img {
+    display: none;
+    margin-top: -12px;
+    position: absolute;
+    left: 50%;
+    /*让图片的左边对准父元素的中间*/
+    margin-left: -65px;
+    /*自身左移半个身位，实现子元素与父元素中心对齐*/
+    z-index: 9999;
+}
+
+#ls_header .top-bar .row .top-bar1 a:hover img {
+    display: block;
+}
+
+.icon-phone::before {
+    content: "\e958";
+    /*填入对应生成字体图标的编码*/
+    font-size: 13px;
+}
+
+.icon-tel::before {
+    content: "\e942";
+    font-size: 13px;
+}
+#ls_header .navbar-ls{
+    background-color: #fff;
+    margin-bottom: 0px;
+}
+#ls_header .navbar-ls .navbar-brand{
+    height: 70px; 
+    padding: 0;
+    margin-right: 20px;
+}
+#ls_header .navbar-ls .navbar-nav a{
+    height: 70px;
+    line-height: 40px;
+}
+#ls_header .navbar-ls .navbar-nav li.active a,
+#ls_header .navbar-ls .navbar-nav li a:hover{
+    background: transparent;
+    border-bottom: 3px solid #286090;
+}
+#ls_header .navbar-ls .navbar-toggle {           /*调整右侧按钮居中*/
+    margin-top: 17px;
+}
+/****************************头部的样式********************************/
+
+/****************************焦点图的样式********************************/
+#ls-carousel{}
+#ls-carousel .item{
+    background: no-repeat center center;
+    background-size: cover;
+    -webkit-background-size:cover;
+}
+/****************************焦点图的样式********************************/
+
+/****************************关于我们的样式********************************/
+#ls_about{
+    padding: 20px 0;
+}
+#ls_about .title{
+    padding-bottom: 15px;
+}
+#ls_about .row p{
+    font-size: 15px;
+    line-height: 25px;
+}
+/****************************关于我们的样式********************************/
+
